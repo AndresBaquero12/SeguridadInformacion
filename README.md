@@ -3,7 +3,7 @@
 ### Seguridad De La Información.
 Informes de trabajos en clase.
 # 1
-[Seguridad Info.pdf](https://github.com/user-attachments/files/31092779/Seguridad.Info.pdf)
+
 
 
 ## Video Comprobante trabajo de clase
