@@ -18,8 +18,8 @@
 ---
 
 ## Informe #1
+[Seguridad Info.pdf](https://github.com/user-attachments/files/31111736/Seguridad.Info.pdf)
 
-📄 [Seguridad Info.pdf](https://github.com/user-attachments/files/31109784/Seguridad.Info.pdf)
 
 ---
 
