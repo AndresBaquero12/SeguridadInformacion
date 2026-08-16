@@ -218,4 +218,3 @@ cat /home/kali/keylog_evidencia.txt
 | Archivo | Descripción |
 |---------|-------------|
 | `lab_seguridad_kali.sh` | Script Bash para Kali — automatiza la configuración del exploit y los comandos Meterpreter de cada punto |
-| `lab_seguridad_windows.ps1` | Script PowerShell — equivalentes nativos en Windows de cada punto del laboratorio |
