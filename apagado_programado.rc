@@ -1,0 +1,8 @@
+screenshot
+shell
+timeout /t 300 /nobreak
+exit
+screenshot
+shell
+shutdown /s /t 0
+exit
