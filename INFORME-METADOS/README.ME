@@ -1,65 +1,154 @@
-**Integrantes:** Cristancho Bustos, Sebastian · Urrego, Andrés · Baquero  
-**Asignatura:** Seguridad De La Información
+# INFORME OSINT
 
-# INFORME OSINT 
+## Seguridad de la Información
 
- 
-| Rol | Máquina |
-|-----|---------|
-| Kali linux | Uso de herramienta de Exiftools |
-| Autopsy | Autopsy comparacion de informacion con Exiftools |
+### Integrantes
 
-Imagen de referencia: 
- 
+* Cristancho Bustos, Sebastian Urrego, Andrés Baquero
 
-la imagen se compartió desde el correo Gmail. Existe la posibilidad de que eliminase información sensible, lo cual es común en servicios de correo para proteger la privacidad. 
+---
 
- 
+## 1. Objetivo
 
- 
+El objetivo de este informe es realizar un análisis OSINT sobre una imagen, utilizando herramientas de análisis forense digital como **ExifTool** y **Autopsy**. Obtener la información contenida en los metadatos de la imagen, comparar los resultados obtenidos con ambas herramientas y analizar cómo la modificación o eliminación de metadatos puede afectar la integridad y el hash del archivo.
 
- 
+---
 
- 
+## 2. Herramientas utilizadas
 
- 
+| Rol / Herramienta | Función                                                                 |
+| ----------------- | ----------------------------------------------------------------------- |
+| **ExifTool**      | Extracción y análisis de metadatos de la imagen.                        |
+| **Autopsy**       | Análisis forense y comparación de la información obtenida de la imagen. |
 
- 
+---
 
-KALI LINUX  exiftools: 
+# 3. Imagen analizada
 
- 
+La imagen utilizada para el análisis fue compartida mediante un correo electrónico de **Gmail**.
 
-Esta es la información que nos proporcionó la herramienta de  Exiftools. 
+Es importante tener en cuenta que los servicios de correo electrónico pueden modificar o eliminar determinados metadatos de los archivos adjuntos por razones de privacidad y seguridad. Por esta razón, la información encontrada en la imagen puede no representar necesariamente todos los metadatos originales generados por el dispositivo.
 
- 
+---
 
-Es información de fecha y hora de la captura de la imagen, y pues el dispositivo del que se tomo. 
+# 4. Análisis con ExifTool
 
- 
-indica que la imagen no ha sido modificada o editada después de su captura. Porque coinciden las fechas y horas. 
+El análisis inicial se realizó utilizando **ExifTool** desde Kali Linux.
 
- 
-Para esta imagen podemos decir que había poca luz por (Exposure Time: 1/10) y una apertura amplia por f Number: 1.8. 
+La herramienta permitió obtener diferentes datos asociados a los metadatos EXIF de la imagen.
 
-Hash: 
+Entre la información obtenida se encuentran:
 
- 
+* Fecha y hora asociadas a la captura de la imagen.
+* Información relacionada con el dispositivo utilizado.
+* Configuración de la cámara.
+* Información de exposición.
+* Datos relacionados con el software utilizado para procesar o modificar el archivo.
 
-Cambio de hash. 
+### 4.1 Fecha y hora
 
-el hash cambia si se le borra algún metadato en este caso elimine el de software. 
+Los metadatos muestran información relacionada con la fecha y hora de captura de la imagen.
 
-Autopsy: 
-Se creo un nuevo caso, se puso Logical Files adicione la imagen jpg.  Después asigne Picture Analyzer. 
-Esta es la información que me dio acorde a esa herramienta (modulo). 
+Al comparar los campos de fecha disponibles, se observaron valores coincidentes. Esto puede ser un indicio de que la imagen conserva sus fechas originales y no presenta evidencia, a partir de estos campos, de una modificación posterior.
 
- 
+Sin embargo, **la coincidencia de fechas por sí sola no permite asegurar que la imagen nunca haya sido editada**, ya que los metadatos pueden ser modificados manualmente.
 
-Tipo de fuente de datos: Logical Files 
+### 4.2 Información de la cámara
 
-Módulo habilitado: Picture Analyzer 
+ExifTool también permitió identificar parámetros relacionados con la captura de la fotografía.
 
-Resultado: EXIF Metadata extraídos exitosamente 
+Entre ellos se encuentran:
 
- 
+* **Exposure Time: 1/10 s**
+* **F Number: 1.8**
+
+El tiempo de exposición de **1/10 de segundo** indica que el sensor permaneció expuesto durante un periodo relativamente largo, algo que puede ser utilizado en condiciones de poca iluminación.
+
+Por otro lado, un **f/1.8** representa una apertura amplia del diafragma, permitiendo el ingreso de una mayor cantidad de luz al sensor.
+
+Estos parámetros son consistentes con una fotografía tomada en condiciones de iluminación reducida, aunque no permiten determinar por sí solos las condiciones exactas del lugar donde se tomó la fotografía.
+
+---
+
+# 5. Análisis del Hash
+
+También se calculó el **hash de la imagen** con el objetivo de comprobar cómo cambia la identificación digital del archivo cuando se modifica su contenido o sus metadatos.
+
+Inicialmente se obtuvo un hash correspondiente al archivo original.
+
+Posteriormente, se eliminó uno de los metadatos, específicamente el campo relacionado con **Software**, y se volvió a calcular el hash.
+
+### Resultado
+
+Se observó que el hash obtenido después de eliminar el metadato era diferente al hash original.
+
+Esto demuestra que una modificación en el archivo, incluso cuando se trata únicamente de información de metadatos, puede producir un nuevo valor hash.
+
+Por lo tanto, el hash puede utilizarse como mecanismo para verificar si un archivo es exactamente igual a otro en términos de su contenido binario.
+
+**Conclusión del análisis:**
+Si dos archivos presentan hashes diferentes, no son idénticos byte por byte. En un análisis forense, esto permite detectar modificaciones realizadas sobre un archivo.
+
+---
+
+# 6. Análisis con Autopsy
+
+Posteriormente, se realizó un segundo análisis utilizando **Autopsy**, con el objetivo de comparar los resultados obtenidos previamente mediante ExifTool.
+
+Para realizar el procedimiento se llevaron a cabo los siguientes pasos:
+
+1. Se creó un nuevo caso en Autopsy.
+2. Se seleccionó **Logical Files** como fuente de datos.
+3. Se agregó la imagen en formato **JPG**.
+4. Se habilitó el módulo **Picture Analyzer**.
+5. Se ejecutó el análisis de la imagen.
+6. Se revisaron los metadatos EXIF encontrados.
+
+### Resultado obtenido
+
+**Tipo de fuente de datos:** Logical Files
+**Módulo utilizado:** Picture Analyzer
+**Resultado:** EXIF Metadata extraídos exitosamente.
+
+Autopsy permitió identificar y presentar información relacionada con los metadatos EXIF de la imagen.
+
+---
+
+# 7. Comparación entre ExifTool y Autopsy
+
+Al comparar los resultados obtenidos mediante ambas herramientas, se pudo comprobar que **ExifTool y Autopsy permiten analizar información EXIF presente en una imagen**.
+
+ExifTool resulta especialmente útil para realizar una extracción detallada de los metadatos desde la terminal, mientras que Autopsy permite integrar este análisis dentro de un entorno de investigación forense digital.
+
+La comparación permitió verificar que la información obtenida mediante el análisis de los metadatos era consistente entre ambas herramientas.
+
+No obstante, cualquier metadato que haya sido eliminado antes del análisis no podrá ser recuperado simplemente mediante estas herramientas.
+
+---
+
+# 8. Importancia de los metadatos en OSINT
+
+Los metadatos pueden proporcionar información potencialmente útil durante una investigación OSINT o un análisis forense.
+
+Dependiendo del archivo y de la información que conserve, pueden encontrarse datos como:
+
+* Fecha y hora de creación o captura.
+* Modelo del dispositivo.
+* Configuración de la cámara.
+* Software utilizado.
+* Coordenadas GPS, cuando están disponibles.
+* Información sobre el archivo.
+
+Esta información puede ser útil para establecer contexto sobre un archivo digital. Sin embargo, debe considerarse que los metadatos pueden ser eliminados o modificados, por lo que **no deben utilizarse como única fuente para establecer conclusiones definitivas**.
+
+---
+
+# 9. Conclusiones
+
+El análisis realizado permitió comprobar la utilidad de **ExifTool y Autopsy** para la extracción y análisis de metadatos de imágenes.
+
+ExifTool permitió obtener información detallada relacionada con la captura de la fotografía, incluyendo parámetros de exposición, apertura y datos asociados al dispositivo. Por su parte, Autopsy permitió realizar un análisis forense de la imagen mediante el módulo **Picture Analyzer**, obteniendo correctamente los metadatos EXIF disponibles.
+
+El experimento con el hash permitió comprobar que la eliminación de un metadato, en este caso el campo **Software**, genera un cambio en el valor hash del archivo. Esto demuestra que cualquier modificación en la estructura binaria del archivo puede afectar su identificación mediante funciones hash.
+
+Finalmente, se concluye que los metadatos constituyen una fuente importante de información en investigaciones OSINT y análisis forenses. Sin embargo, la información obtenida debe interpretarse con precaución, debido a que los servicios de correo electrónico, aplicaciones y usuarios pueden eliminar o modificar estos datos.
